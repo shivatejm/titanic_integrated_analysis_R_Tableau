@@ -1,0 +1,736 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20182.18.0627.2230                               -->
+<workbook original-version='18.1' source-build='2018.2.0 (20182.18.0627.2230)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='# of Clusters' datatype='integer' name='[Parameter 1]' param-domain-type='any' role='measure' type='quantitative' value='6'>
+        <calculation class='tableau' formula='6' />
+      </column>
+      <column caption='Seed' datatype='integer' name='[Parameter 2]' param-domain-type='any' role='measure' type='quantitative' value='1234'>
+        <calculation class='tableau' formula='1234' />
+      </column>
+    </datasource>
+    <datasource caption='titanicUpdated1_N' inline='true' name='federated.10dglxf046mee01ervb8o0flg072' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='titanicUpdated1_N' name='textscan.0zmi3tn1pi6u3q1gblh010h0lgjd'>
+            <connection class='textscan' directory='C:/Users/public.SUJI/Downloads' filename='titanicUpdated1_N.csv' password='' port='0' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0zmi3tn1pi6u3q1gblh010h0lgjd' name='titanicUpdated1_N.csv' table='[titanicUpdated1_N#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='integer' name='X' ordinal='1' />
+            <column datatype='integer' name='PassengerId' ordinal='2' />
+            <column datatype='integer' name='Survived' ordinal='3' />
+            <column datatype='integer' name='Pclass' ordinal='4' />
+            <column datatype='string' name='Name' ordinal='5' />
+            <column datatype='string' name='Sex' ordinal='6' />
+            <column datatype='integer' name='Age' ordinal='7' />
+            <column datatype='integer' name='SibSp' ordinal='8' />
+            <column datatype='integer' name='Parch' ordinal='9' />
+            <column datatype='string' name='Ticket' ordinal='10' />
+            <column datatype='real' name='Fare' ordinal='11' />
+            <column datatype='string' name='Cabin' ordinal='12' />
+            <column datatype='string' name='Embarked' ordinal='13' />
+            <column datatype='integer' name='SurvivedNum' ordinal='14' />
+            <column datatype='integer' name='SexN' ordinal='15' />
+            <column datatype='integer' name='EmbarkedN' ordinal='16' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[titanicUpdated1_N.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;Rs&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[titanicUpdated1_N.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>X</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[X]</local-name>
+            <parent-name>[titanicUpdated1_N.csv]</parent-name>
+            <remote-alias>X</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PassengerId</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[PassengerId]</local-name>
+            <parent-name>[titanicUpdated1_N.csv]</parent-name>
+            <remote-alias>PassengerId</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Survived</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Survived]</local-name>
+            <parent-name>[titanicUpdated1_N.csv]</parent-name>
+            <remote-alias>Survived</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pclass</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Pclass]</local-name>
+            <parent-name>[titanicUpdated1_N.csv]</parent-name>
+            <remote-alias>Pclass</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Name]</local-name>
+            <parent-name>[titanicUpdated1_N.csv]</parent-name>
+            <remote-alias>Name</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sex</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Sex]</local-name>
+            <parent-name>[titanicUpdated1_N.csv]</parent-name>
+            <remote-alias>Sex</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Age</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Age]</local-name>
+            <parent-name>[titanicUpdated1_N.csv]</parent-name>
+            <remote-alias>Age</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SibSp</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[SibSp]</local-name>
+            <parent-name>[titanicUpdated1_N.csv]</parent-name>
+            <remote-alias>SibSp</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Parch</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Parch]</local-name>
+            <parent-name>[titanicUpdated1_N.csv]</parent-name>
+            <remote-alias>Parch</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Ticket</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Ticket]</local-name>
+            <parent-name>[titanicUpdated1_N.csv]</parent-name>
+            <remote-alias>Ticket</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Fare</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Fare]</local-name>
+            <parent-name>[titanicUpdated1_N.csv]</parent-name>
+            <remote-alias>Fare</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Cabin</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Cabin]</local-name>
+            <parent-name>[titanicUpdated1_N.csv]</parent-name>
+            <remote-alias>Cabin</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Embarked</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Embarked]</local-name>
+            <parent-name>[titanicUpdated1_N.csv]</parent-name>
+            <remote-alias>Embarked</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SurvivedNum</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[SurvivedNum]</local-name>
+            <parent-name>[titanicUpdated1_N.csv]</parent-name>
+            <remote-alias>SurvivedNum</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SexN</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[SexN]</local-name>
+            <parent-name>[titanicUpdated1_N.csv]</parent-name>
+            <remote-alias>SexN</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>EmbarkedN</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[EmbarkedN]</local-name>
+            <parent-name>[titanicUpdated1_N.csv]</parent-name>
+            <remote-alias>EmbarkedN</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Cluster' datatype='integer' name='[Calculation_949978095445401600]' role='measure' type='ordinal'>
+        <calculation class='tableau' formula='Script_INT(&quot;&#13;&#10;&#13;&#10;## Sets the seed&#13;&#10;&#13;&#10;set.seed(.arg8[1])&#13;&#10;&#13;&#10;## Studentizes the variables&#13;&#10; &#13;&#10;&#13;&#10;age&lt;-(.arg1-mean(.arg1))/sd(.arg1)&#13;&#10;&#13;&#10;pclass&lt;-(.arg2-mean(.arg2))/sd(.arg2)&#13;&#10;&#13;&#10;embarkedn&lt;-(.arg3-mean(.arg3))/sd(.arg3)&#13;&#10;&#13;&#10;sex&lt;-(.arg4-mean(.arg4))/sd(.arg4)&#13;&#10;&#13;&#10;survived&lt;-(.arg5-mean(.arg5))/sd(.arg5)&#13;&#10;&#13;&#10;sibsp&lt;-(.arg6-mean(.arg6))/sd(.arg6)&#13;&#10; &#13;&#10;&#13;&#10;dat&lt;-cbind(age,pclass,embarkedn,sex,survived,sibsp)&#13;&#10;&#13;&#10;&#13;&#10;num&lt;-.arg7[1]&#13;&#10;&#13;&#10;## Creates the clusters&#13;&#10;&#13;&#10;kmeans(dat,num)$cluster&#13;&#10;&#13;&#10;&quot;,&#13;&#10;&#13;&#10;SUM([Age]),SUM([Pclass]),SUM([EmbarkedN]),SUM([SexN]),SUM([SurvivedNum]),SUM([SibSp]),[Parameters].[Parameter 1],[Parameters].[Parameter 2])'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Embarked N' datatype='integer' name='[EmbarkedN]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Passenger Id' datatype='integer' name='[PassengerId]' role='dimension' type='ordinal' />
+      <column caption='Sex N' datatype='integer' name='[SexN]' role='measure' type='quantitative' />
+      <column caption='Sib Sp' datatype='integer' name='[SibSp]' role='measure' type='quantitative' />
+      <column caption='Survived Num' datatype='integer' name='[SurvivedNum]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' datatype='integer' name='[Survived]' role='dimension' type='ordinal' />
+      <extract count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='C:/Users/public.SUJI/Downloads/titanicUpdated1_N.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='10/05/2018 01:10:40 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh>
+            <refresh-event add-from-file-path='' increment-value='%null%' refresh-type='create' rows-inserted='891' timestamp-start='2018-10-05 01:10:40' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>F1</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[F1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>F1</remote-alias>
+              <ordinal>0</ordinal>
+              <family>titanicUpdated1_N.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>891</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>X</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[X]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>X</remote-alias>
+              <ordinal>1</ordinal>
+              <family>titanicUpdated1_N.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>891</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>PassengerId</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[PassengerId]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>PassengerId</remote-alias>
+              <ordinal>2</ordinal>
+              <family>titanicUpdated1_N.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>891</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Survived</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Survived]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Survived</remote-alias>
+              <ordinal>3</ordinal>
+              <family>titanicUpdated1_N.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Pclass</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Pclass]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Pclass</remote-alias>
+              <ordinal>4</ordinal>
+              <family>titanicUpdated1_N.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Name</remote-alias>
+              <ordinal>5</ordinal>
+              <family>titanicUpdated1_N.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>891</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Sex</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Sex]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Sex</remote-alias>
+              <ordinal>6</ordinal>
+              <family>titanicUpdated1_N.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Age</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Age]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Age</remote-alias>
+              <ordinal>7</ordinal>
+              <family>titanicUpdated1_N.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>71</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>SibSp</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[SibSp]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>SibSp</remote-alias>
+              <ordinal>8</ordinal>
+              <family>titanicUpdated1_N.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Parch</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Parch]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Parch</remote-alias>
+              <ordinal>9</ordinal>
+              <family>titanicUpdated1_N.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Ticket</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Ticket]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Ticket</remote-alias>
+              <ordinal>10</ordinal>
+              <family>titanicUpdated1_N.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>891</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Fare</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Fare]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Fare</remote-alias>
+              <ordinal>11</ordinal>
+              <family>titanicUpdated1_N.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>256</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Cabin</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Cabin]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Cabin</remote-alias>
+              <ordinal>12</ordinal>
+              <family>titanicUpdated1_N.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>148</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Embarked</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Embarked]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Embarked</remote-alias>
+              <ordinal>13</ordinal>
+              <family>titanicUpdated1_N.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>SurvivedNum</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[SurvivedNum]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>SurvivedNum</remote-alias>
+              <ordinal>14</ordinal>
+              <family>titanicUpdated1_N.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>SexN</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[SexN]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>SexN</remote-alias>
+              <ordinal>15</ordinal>
+              <family>titanicUpdated1_N.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>EmbarkedN</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[EmbarkedN]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>EmbarkedN</remote-alias>
+              <ordinal>16</ordinal>
+              <family>titanicUpdated1_N.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.347701' measure-ordering='alphabetic' measure-percentage='0.531609' parameter-percentage='0.12069' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='# of Clusters' datatype='integer' name='[Parameter 1]' param-domain-type='any' role='measure' type='quantitative' value='6'>
+          <calculation class='tableau' formula='6' />
+        </column>
+        <column caption='Seed' datatype='integer' name='[Parameter 2]' param-domain-type='any' role='measure' type='quantitative' value='1234'>
+          <calculation class='tableau' formula='1234' />
+        </column>
+      </datasource-dependencies>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Overall Clusters'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='titanicUpdated1_N' name='federated.10dglxf046mee01ervb8o0flg072' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='# of Clusters' datatype='integer' name='[Parameter 1]' param-domain-type='any' role='measure' type='quantitative' value='6'>
+              <calculation class='tableau' formula='6' />
+            </column>
+            <column caption='Seed' datatype='integer' name='[Parameter 2]' param-domain-type='any' role='measure' type='quantitative' value='1234'>
+              <calculation class='tableau' formula='1234' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.10dglxf046mee01ervb8o0flg072'>
+            <column datatype='integer' name='[Age]' role='measure' type='quantitative' />
+            <column caption='Cluster' datatype='integer' name='[Calculation_949978095445401600]' role='measure' type='ordinal'>
+              <calculation class='tableau' formula='Script_INT(&quot;&#13;&#10;&#13;&#10;## Sets the seed&#13;&#10;&#13;&#10;set.seed(.arg8[1])&#13;&#10;&#13;&#10;## Studentizes the variables&#13;&#10; &#13;&#10;&#13;&#10;age&lt;-(.arg1-mean(.arg1))/sd(.arg1)&#13;&#10;&#13;&#10;pclass&lt;-(.arg2-mean(.arg2))/sd(.arg2)&#13;&#10;&#13;&#10;embarkedn&lt;-(.arg3-mean(.arg3))/sd(.arg3)&#13;&#10;&#13;&#10;sex&lt;-(.arg4-mean(.arg4))/sd(.arg4)&#13;&#10;&#13;&#10;survived&lt;-(.arg5-mean(.arg5))/sd(.arg5)&#13;&#10;&#13;&#10;sibsp&lt;-(.arg6-mean(.arg6))/sd(.arg6)&#13;&#10; &#13;&#10;&#13;&#10;dat&lt;-cbind(age,pclass,embarkedn,sex,survived,sibsp)&#13;&#10;&#13;&#10;&#13;&#10;num&lt;-.arg7[1]&#13;&#10;&#13;&#10;## Creates the clusters&#13;&#10;&#13;&#10;kmeans(dat,num)$cluster&#13;&#10;&#13;&#10;&quot;,&#13;&#10;&#13;&#10;SUM([Age]),SUM([Pclass]),SUM([EmbarkedN]),SUM([SexN]),SUM([SurvivedNum]),SUM([SibSp]),[Parameters].[Parameter 1],[Parameters].[Parameter 2])'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Embarked N' datatype='integer' name='[EmbarkedN]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Pclass]' role='measure' type='quantitative' />
+            <column caption='Sex N' datatype='integer' name='[SexN]' role='measure' type='quantitative' />
+            <column caption='Sib Sp' datatype='integer' name='[SibSp]' role='measure' type='quantitative' />
+            <column caption='Survived Num' datatype='integer' name='[SurvivedNum]' role='dimension' type='ordinal' />
+            <column aggregation='Sum' datatype='integer' name='[Survived]' role='dimension' type='ordinal' />
+            <column-instance column='[Survived]' derivation='None' name='[none:Survived:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_949978095445401600]' derivation='User' name='[usr:Calculation_949978095445401600:ok]' pivot='key' type='ordinal'>
+              <table-calc ordering-type='Rows' />
+            </column-instance>
+          </datasource-dependencies>
+          <aggregation value='false' />
+        </view>
+        <style />
+        <panes>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols>([federated.10dglxf046mee01ervb8o0flg072].[usr:Calculation_949978095445401600:ok] / [federated.10dglxf046mee01ervb8o0flg072].[none:Survived:ok])</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' maximized='true' name='Overall Clusters'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='type_in' param='[Parameters].[Parameter 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.10dglxf046mee01ervb8o0flg072].[none:Survived:ok]</field>
+            <field>[federated.10dglxf046mee01ervb8o0flg072].[usr:Calculation_949978095445401600:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Overall Clusters' width='124'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAACFUlEQVR4nO3TMQEAIAzAMMC/5yFjRxMFfXpnZg5Eve0A2GQA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQD
+      kGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBp
+      BiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA
+      0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDN
+      AKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxA
+      mgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKR9Y+0F
+      fBUOM1sAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
